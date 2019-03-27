@@ -17,7 +17,6 @@ public:
 	string getName() { return name; };
 
 	string getDescription();
-	Player getPlayer(int playerIndex);
 
 	void addPlayer(Player playerToAdd);
 	void changePlayer(Player player, int playerIndex);

@@ -14,14 +14,10 @@ Team::Team(const Team &source)
 		addPlayer(playerToAdd);
 	}
 }
+
 void Team::addPlayer(Player playerToAdd)
 {
 	this->players.push_back(playerToAdd);
-}
-
-Player Team::getPlayer(int playerIndex)
-{
-	return players[playerIndex];
 }
 
 void Team::changePlayer(Player player, int playerIndex)
