@@ -51,7 +51,6 @@ string Player::getDescription()
 	return description;
 }
 
-
 Player Player::rerollSkills(int seed)
 {
 	this->skills = Skills::generatSkills(seed, 5);

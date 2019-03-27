@@ -4,7 +4,6 @@ string Team::getName() { return name; };
 
 Team::Team(const string name)
 {
-	
 	this->name = name;
 }
 

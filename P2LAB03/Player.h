@@ -13,11 +13,13 @@ public:
 	Player(string name, string surname, short int height, int seed);
 	Player(const Player &source);
 	~Player();
+
 	string getName();
 	string getSurname();
 	string getSkills();
 	short int getHeight();
 	string getDescription();
+
 	Player rerollSkills(int seed);
 };
 
