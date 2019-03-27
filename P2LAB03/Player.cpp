@@ -28,10 +28,6 @@ Player::Player(const Player &source)
 
 Player::~Player() {}
 
-string Player::getName() {return name;}
-string Player::getSurname() {return surname;}
-short int Player::getHeight() {return height;}
-
 string Player::getSkills()
 {
 	string concatenatedSkills;

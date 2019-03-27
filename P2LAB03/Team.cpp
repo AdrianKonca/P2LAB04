@@ -1,6 +1,5 @@
 ﻿#include "pch.h"
 #include "Team.h"
-string Team::getName() { return name; };
 
 Team::Team(const string name)
 {
@@ -40,3 +39,4 @@ string Team::getDescription()
 	}
 	return description;
 }
+

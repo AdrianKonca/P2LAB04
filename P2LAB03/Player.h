@@ -14,10 +14,11 @@ public:
 	Player(const Player &source);
 	~Player();
 
-	string getName();
-	string getSurname();
+	string getName() { return name; };
+	string getSurname() { return surname; };
+	short int getHeight() { return height; };
+
 	string getSkills();
-	short int getHeight();
 	string getDescription();
 
 	Player rerollSkills(int seed);

@@ -11,7 +11,11 @@ public:
 	Team(const string name);
 	Team(const Team &source);
 
-	string getName();
+	Player operator [](int i) const { return players[i]; }
+	Player & operator [](int i) { return players[i]; }
+
+	string getName() { return name; };
+
 	string getDescription();
 	Player getPlayer(int playerIndex);
 
