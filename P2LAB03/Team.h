@@ -6,8 +6,8 @@
 class Team
 {
 private:
-	string name_;
-	vector <Player> players_;
+	string name;
+	vector <Player> players;
 public:
 	Team(const string name);
 	Team(const Team &source);
@@ -15,5 +15,6 @@ public:
 	void addPlayer(Player playerToAdd);
 	string getDescription();
 	Player getPlayer(int playerIndex);
+	void changePlayer(Player player, int playerIndex);
 };
 

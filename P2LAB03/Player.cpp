@@ -4,38 +4,38 @@
 
 Player::Player(string name, string surname, short int height, vector<string> skills)
 {
-	name_ = name;
-	surname_ = surname;
-	skills_ = skills;
-	height_ = height;
+	this->name = name;
+	this->surname = surname;
+	this->skills = skills;
+	this->height = height;
 }
 
 Player::Player(string name, string surname, short int height, int seed)
 {
-	name_ = name;
-	surname_ = surname;
-	skills_ = Skills::generatSkills(seed, 5);
-	height_ = height;
+	this->name = name;
+	this->surname = surname;
+	this->skills = Skills::generatSkills(seed, 5);
+	this->height = height;
 }
 
 Player::Player(const Player &source)
 {
-	name_ = source.name_;
-	surname_ = source.surname_;
-	skills_ = source.skills_;
-	height_ = source.height_;
+	this->name = source.name;
+	this->surname = source.surname;
+	this->skills = source.skills;
+	this->height = source.height;
 }
 
 Player::~Player() {}
 
-string Player::getName() {return name_;}
-string Player::getSurname() {return surname_;}
-short int Player::getHeight() {return height_;}
+string Player::getName() {return name;}
+string Player::getSurname() {return surname;}
+short int Player::getHeight() {return height;}
 
 string Player::getSkills()
 {
 	string concatenatedSkills;
-	for (string skill : skills_)
+	for (string skill : skills)
 	{
 		concatenatedSkills += skill + " ";
 	}
@@ -54,5 +54,6 @@ string Player::getDescription()
 
 Player Player::rerollSkills(int seed)
 {
-	return Player(name_, surname_, height_, seed);
+	this->skills = Skills::generatSkills(seed, 5);
+	return *this;
 }

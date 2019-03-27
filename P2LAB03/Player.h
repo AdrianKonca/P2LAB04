@@ -4,10 +4,10 @@
 
 class Player
 {
-	string name_;
-	string surname_;
-	vector<string> skills_;
-	short int height_;
+	string name;
+	string surname;
+	vector<string> skills;
+	short int height;
 public:
 	Player(string name, string surname, short int height, vector<string> skills);
 	Player(string name, string surname, short int height, int seed);
