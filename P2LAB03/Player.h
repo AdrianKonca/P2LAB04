@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <vector>
+#include <sstream>
 
 class Player
 {
@@ -11,6 +12,7 @@ class Player
 public:
 	Player(string name, string surname, short int height, vector<string> skills);
 	Player(string name, string surname, short int height, int seed);
+	Player(string fileString);
 	Player(const Player &source);
 	~Player();
 
@@ -22,5 +24,6 @@ public:
 	string getDescription();
 
 	Player rerollSkills(int seed);
+	string getSaveString();
 };
 

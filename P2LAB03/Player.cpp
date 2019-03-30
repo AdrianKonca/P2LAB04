@@ -52,3 +52,16 @@ Player Player::rerollSkills(int seed)
 	this->skills = Skills::generatSkills(seed, 5);
 	return *this;
 }
+
+string Player::getSaveString()
+{
+	const char DELIMITER = ',';
+	stringstream save = stringstream();
+	save << name << DELIMITER << surname << DELIMITER << height;
+	for (string skill : skills)
+	{
+		save << DELIMITER << skill;
+	}
+	save << endl;
+	return save.str();
+}

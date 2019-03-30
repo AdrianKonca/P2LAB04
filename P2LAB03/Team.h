@@ -2,6 +2,7 @@
 #include "Player.h"
 #include <string>
 #include <vector>
+#include <fstream>
 
 class Team
 {
@@ -20,5 +21,7 @@ public:
 
 	void addPlayer(Player playerToAdd);
 	void changePlayer(Player player, int playerIndex);
+	void save();
+	string createFileName();
 };
 
