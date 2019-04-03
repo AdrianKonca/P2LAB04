@@ -25,5 +25,6 @@ public:
 
 	Player rerollSkills(int seed);
 	string getSaveString();
+	static vector<string> splitString(string line, string delimiter);
 };
 

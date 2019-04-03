@@ -3,6 +3,10 @@
 #include <string>
 #include <vector>
 #include <fstream>
+#include <iostream>
+#include <sstream>
+#include <ctime>
+
 
 class Team
 {
@@ -11,6 +15,7 @@ class Team
 public:
 	Team(const string name);
 	Team(const Team &source);
+	Team(fstream dataFile);
 
 	Player operator [](int i) const { return players[i]; }
 	Player & operator [](int i) { return players[i]; }
@@ -23,5 +28,6 @@ public:
 	void changePlayer(Player player, int playerIndex);
 	void save();
 	string createFileName();
+	static fstream openFile(string filePath);
 };
 

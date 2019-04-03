@@ -1,9 +1,6 @@
 ﻿#include "pch.h"
 #include "Team.h"
-#include <iostream>
-#include <sstream>
-#include <fstream>
-#include <ctime>
+
 
 Team::Team(const string name)
 {
@@ -16,6 +13,18 @@ Team::Team(const Team &source)
 	for (Player playerToAdd : source.players)
 	{
 		addPlayer(playerToAdd);
+	}
+}
+
+Team::Team(fstream dataFile)
+{
+	string line;
+	dataFile >> line;
+	name = line;
+	while (!dataFile.eof())
+	{
+		dataFile >> line;
+		addPlayer(Player(line));
 	}
 }
 
@@ -67,4 +76,11 @@ void Team::save()
 	saveFile << saveStream.str();
 	saveFile.flush();
 	saveFile.close();
+}
+
+fstream Team::openFile(string filePath)
+{
+	fstream saveFile;
+	saveFile.open(filePath, fstream::in);
+	return saveFile;
 }
