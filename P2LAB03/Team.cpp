@@ -16,7 +16,7 @@ Team::Team(const Team &source)
 	}
 }
 
-Team::Team(fstream dataFile)
+Team::Team(fstream &dataFile)
 {
 	string line;
 	dataFile >> line;

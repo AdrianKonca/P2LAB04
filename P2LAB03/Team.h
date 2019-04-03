@@ -15,7 +15,7 @@ class Team
 public:
 	Team(const string name);
 	Team(const Team &source);
-	Team(fstream dataFile);
+	Team(fstream &dataFile);
 
 	Player operator [](int i) const { return players[i]; }
 	Player & operator [](int i) { return players[i]; }

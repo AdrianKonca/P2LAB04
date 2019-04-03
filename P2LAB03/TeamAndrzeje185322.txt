@@ -1,0 +1,6 @@
+Andrzeje
+Andrzej1,A,160,8,2,5,7,9
+Andrzej2,B,161,2,3,4
+Andrzej3,C,162,3,4,5
+Andrzej4,D,163,4,5,6
+Andrzej5,E,164,5,6,7
